@@ -5,16 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <style>
+        .Cabecalho{
+            max-width: 300px;
+			max-height: 800px;
+			padding: 3%;
+            margin: auto;
+			background: cadetblue;
+			height: 500px;
+			border:2px solid blue
+        }  
+        #hum{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+        .Corpo{
+            text-align: center;
+            font-style:italic;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #lista{
+            font-style:normal;
+            text-align: justify;
+        }
+    </style>
 </head>
 
 <body>
     <div class="Cabecalho">
-        <h1>To do List</h1>
+        <h1 id="hum">To do List</h1>
         <div class="Corpo">
+            <p>Com esta aplicação você pode adicionar, remover e finalizar tarefas de maneira simples.</p>
             <div class="Conteudo">
+                
                 <form>
                     <input type="text" name="task" id='task' placeholder="Adicione uma nova tarefa..."/>
-                    <input type="button" name="botao" value="adiciona" onclick="Adiciona();"/>
+                    <input type="button" name="botao" value="Adicionar" onclick="Adiciona();"/>
                 </form>
             </div>
         </div>
@@ -23,9 +49,7 @@
                 <div class="ToDo">
 
                     <ul id="lista">
-                        <li class="teste">
-
-                        </li>
+                        
                     </ul>
 
                 </div>
@@ -78,7 +102,8 @@
     CriarOkTarefaBt = function(item1){
         let check = document.createElement("checkbox");
         check.innerHTML = '<input type="checkbox" id = "teste1">';
-        return check;   
+        return check;
+        var checkBox = document.getElementById("teste1").value;
     }
     
 </script>
